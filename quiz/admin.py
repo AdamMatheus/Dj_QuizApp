@@ -4,11 +4,11 @@ from . import models
 
 @admin.register(models.Category)
 
-class CatAdmin(admin.ModelAdmin):
+class QuizAdmin(admin.ModelAdmin):
     list_display=[
         'name',
                   ]
-    
+
 @admin.register(models.Quizzes)
 
 class QuizAdmin(admin.ModelAdmin):

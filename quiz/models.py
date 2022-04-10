@@ -26,14 +26,14 @@ class Quizzes(models.Model):
 
 
 
-class Updated(models.Model):
+class UpdatedQuestion(models.Model):
     
     date_updated = models.DateTimeField(
         verbose_name=_("Last Updated"), auto_now= True
     )
     class Meta:
         abstract = True
-class Question(Updated):
+class Question(UpdatedQuestion):
     
     class Meta:
         verbose_name = _("Question")
@@ -70,7 +70,7 @@ class Question(Updated):
     
 
 
-class Answer(Updated):
+class Answer(UpdatedQuestion):
     
     class Meta:
         verbose_name = _("Answer")
